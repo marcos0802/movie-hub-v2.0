@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import LocalMoviesRoundedIcon from "@material-ui/icons/LocalMoviesRounded";
-import {
-  Nav,
-  MenuBar,
-  NavBtn,
-  NavBtnLink,
-  NavLink,
-  NavMenu,
-} from "./HeaderStyle";
+import { Nav, MenuBar, NavLink, NavMenu } from "./HeaderStyle";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +12,14 @@ const Header = () => {
   const closeMobileMenu = () => setShowMenu(false);
   return (
     <Nav>
-      <NavLink to="/" onClick={closeMobileMenu} className="logo">
+      <NavLink
+        to="/"
+        onClick={() => {
+          closeMobileMenu();
+          window.scroll(0, 0);
+        }}
+        className="logo"
+      >
         <h1>
           {" "}
           <LocalMoviesRoundedIcon style={{ fontSize: "50px" }} />
@@ -36,27 +36,57 @@ const Header = () => {
         )}
       </MenuBar>
       <NavMenu className={showMenu ? "nav-menu active" : "nav-menu"}>
-        <NavLink to="/trending" activeStyle onClick={closeMobileMenu}>
-          <h1>Trending</h1>
+        <NavLink
+          to="/trending"
+          activeStyle
+          onClick={() => {
+            window.scroll(0, 0);
+            closeMobileMenu();
+          }}
+        >
+          Trending
         </NavLink>
-        <NavLink to="/movies" activeStyle onClick={closeMobileMenu}>
-          <h1>Movies</h1>
+        <NavLink
+          to="/movies"
+          activeStyle
+          onClick={() => {
+            window.scroll(0, 0);
+            closeMobileMenu();
+          }}
+        >
+          Movies
         </NavLink>
-        <NavLink to="/series" activeStyle onClick={closeMobileMenu}>
-          <h1>Series</h1>
+        <NavLink
+          to="/series"
+          activeStyle
+          onClick={() => {
+            window.scroll(0, 0);
+            closeMobileMenu();
+          }}
+        >
+          Series
         </NavLink>
-        <NavLink to="/search" activeStyle onClick={closeMobileMenu}>
-          <h1>Search</h1>
+        <NavLink
+          to="/search"
+          activeStyle
+          onClick={() => {
+            window.scroll(0, 0);
+            closeMobileMenu();
+          }}
+        >
+          Search
         </NavLink>
-        <NavLink to="/about" activeStyle onClick={closeMobileMenu}>
-          <h1>About</h1>
+        <NavLink
+          to="/about"
+          activeStyle
+          onClick={() => {
+            window.scroll(0, 0);
+            closeMobileMenu();
+          }}
+        >
+          About
         </NavLink>
       </NavMenu>
-      <NavBtn>
-        <NavBtnLink to="/sign-in" activeStyle onClick={closeMobileMenu}>
-          Sign In
-        </NavBtnLink>
-      </NavBtn>
     </Nav>
   );
 };

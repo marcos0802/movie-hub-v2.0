@@ -10,7 +10,7 @@ const Btn = styled.button`
   cursor: pointer;
   &:hover {
     background: white !important;
-    border-color: black;
+    border-color: steelblue;
     color: black;
   }
 `;
