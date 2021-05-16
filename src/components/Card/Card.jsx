@@ -6,8 +6,11 @@ const Card = ({ id, poster, title, date, media_type, vote_average }) => {
   return (
     <CardContainer
       style={{
-        background: `url(${poster ? `${img_300}${poster}` : unavailable})`,
+        background: `url(${
+          poster ? `${img_300}${poster}` : unavailable
+        }) no-repeat`,
         backgroundSize: "cover",
+        backgroundAttachement: "fixed",
       }}
     >
       <div className="info-hidden">

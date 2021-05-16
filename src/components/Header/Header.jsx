@@ -38,7 +38,6 @@ const Header = () => {
       <NavMenu className={showMenu ? "nav-menu active" : "nav-menu"}>
         <NavLink
           to="/trending"
-          activeStyle
           onClick={() => {
             window.scroll(0, 0);
             closeMobileMenu();
@@ -48,7 +47,6 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/movies"
-          activeStyle
           onClick={() => {
             window.scroll(0, 0);
             closeMobileMenu();
@@ -58,7 +56,6 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/series"
-          activeStyle
           onClick={() => {
             window.scroll(0, 0);
             closeMobileMenu();
@@ -68,7 +65,6 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/search"
-          activeStyle
           onClick={() => {
             window.scroll(0, 0);
             closeMobileMenu();
@@ -78,7 +74,6 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/about"
-          activeStyle
           onClick={() => {
             window.scroll(0, 0);
             closeMobileMenu();

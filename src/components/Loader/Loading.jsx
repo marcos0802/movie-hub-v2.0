@@ -4,11 +4,11 @@ import styled from "styled-components";
 const Container = styled.div`
   .lds-grid {
     display: inline-block;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: calc(45%);
     top: 45%;
-    transform: translate(90%, 70%);
+    transform: translate(100%, 70%);
   }
   .lds-grid div {
     position: absolute;
@@ -80,14 +80,14 @@ const Grids = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   .card {
-    width: 250px;
+    width: 225px;
     margin: 10px;
-    height: 300px;
-    box-shadow: 0px 1px 5px #ebf3fa;
+    height: 325px;
+    box-shadow: 0px 1px 5px #c7d7e6;
     border-radius: 6px;
     background: none;
     @media screen and (max-width: 846px) {
-      width: 220px;
+      width: 200px;
     }
   }
 `;
@@ -95,6 +95,8 @@ const Loading = () => {
   return (
     <Container>
       <Grids>
+        <div className="card"></div>
+        <div className="card"></div>
         <div className="card"></div>
         <div className="card"></div>
         <div className="card"></div>

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 220px;
-  margin: 10px;
+  width: 225px;
+  margin: 5px;
   padding: 5px;
-  height: 300px;
+  height: 325px;
   box-shadow: 0px 1px 5px #ebf3fa;
   border-radius: 6px;
   background: none;
@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
       padding-top: 20px;
       display: block;
       opacity: 1;
-      background: linear-gradient(to bottom, steelblue, darkblue);
+      background: linear-gradient(to bottom, #041838, #152847);
     }
   }
   .info-hidden {
