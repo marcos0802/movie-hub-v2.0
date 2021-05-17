@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Movies from "./pages/Movies/Movies";
+import Search from "./pages/Search/Search";
 import Series from "./pages/Series/Series";
 import Trending from "./pages/Trending/Trending";
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/trending" component={Trending} />
         <Route path="/movies" component={Movies} />
         <Route path="/series" component={Series} />
+        <Route path="/search" component={Search} />
       </Switch>
       <Footer />
     </Router>

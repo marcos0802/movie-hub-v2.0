@@ -42,12 +42,11 @@ const Search = () => {
     <SearchContainer>
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
       <SearchBox>
-        <div>
+        <div className="search-form">
           <InputField
             type="text"
             placeholder="Search ..."
             padding="10px"
-            width="80%"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);

@@ -4,6 +4,9 @@ export const SearchBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .search-form {
+    display: flex;
+  }
 `;
 export const SearchContainer = styled.div`
   min-height: 80vh;

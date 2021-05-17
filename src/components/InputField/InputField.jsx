@@ -11,12 +11,13 @@ const Input = styled.input`
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   }
 `;
-const InputField = ({ type, placeholder, padding, width, onChange }) => {
+const InputField = ({ type, placeholder, padding, value, onChange }) => {
   return (
     <Input
       type={type}
       placeholder={placeholder}
-      style={{ padding: `${padding}`, width: `${width}` }}
+      style={{ padding: `${padding}`, width: "75%" }}
+      value={value}
       onChange={onChange}
     />
   );

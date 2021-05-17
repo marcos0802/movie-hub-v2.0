@@ -43,7 +43,7 @@ const Header = () => {
             closeMobileMenu();
           }}
         >
-          Trending
+          <h4>Trending</h4>
         </NavLink>
         <NavLink
           to="/movies"
@@ -52,7 +52,7 @@ const Header = () => {
             closeMobileMenu();
           }}
         >
-          Movies
+          <h4>Movies</h4>
         </NavLink>
         <NavLink
           to="/series"
@@ -61,7 +61,7 @@ const Header = () => {
             closeMobileMenu();
           }}
         >
-          Series
+          <h4> Series</h4>
         </NavLink>
         <NavLink
           to="/search"
@@ -70,7 +70,7 @@ const Header = () => {
             closeMobileMenu();
           }}
         >
-          Search
+          <h4>Search</h4>
         </NavLink>
         <NavLink
           to="/about"
@@ -79,7 +79,7 @@ const Header = () => {
             closeMobileMenu();
           }}
         >
-          About
+          <h4>About</h4>
         </NavLink>
       </NavMenu>
     </Nav>
