@@ -40,14 +40,16 @@ const Movies = () => {
   return (
     <MoviesContainer>
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
-      <Genres
-        type="movie"
-        selectedGenres={selectedGenres}
-        setSelectedGenres={setSelectedGenres}
-        genres={genres}
-        setGenres={setGenres}
-        setPage={setPage}
-      />
+      <div style={{ textAlign: "center" }}>
+        <Genres
+          type="movie"
+          selectedGenres={selectedGenres}
+          setSelectedGenres={setSelectedGenres}
+          genres={genres}
+          setGenres={setGenres}
+          setPage={setPage}
+        />
+      </div>
       {errors.length > 0 && <div>{errors}</div>}
       <div style={{ height: "20px" }}></div>
       <MoviesContent>
@@ -61,7 +63,7 @@ const Movies = () => {
               poster={movie.poster_path}
               title={movie.title || movie.name}
               date={movie.first_air_date || movie.release_date}
-              media_type={movie.media_type}
+              media_type="movie"
               vote_average={movie.vote_average}
             />
           ))

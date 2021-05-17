@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const MoviesContainer = styled.div`
   min-height: 80vh;
   width: 100%;
-  padding-left: 50px;
   padding-top: 120px;
   padding-bottom: 50px;
   background: #f0eeee;

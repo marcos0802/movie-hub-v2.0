@@ -41,14 +41,16 @@ const Series = () => {
   return (
     <SeriesContainer>
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
-      <Genres
-        type="movie"
-        selectedGenres={selectedGenres}
-        setSelectedGenres={setSelectedGenres}
-        genres={genres}
-        setGenres={setGenres}
-        setPage={setPage}
-      />
+      <div style={{ textAlign: "center" }}>
+        <Genres
+          type="tv"
+          selectedGenres={selectedGenres}
+          setSelectedGenres={setSelectedGenres}
+          genres={genres}
+          setGenres={setGenres}
+          setPage={setPage}
+        />
+      </div>
       {errors.length > 0 && <div>{errors}</div>}
       <div style={{ height: "20px" }}></div>
       <SeriesContent>
