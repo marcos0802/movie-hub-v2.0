@@ -6,7 +6,7 @@ const ScrollUp = styled.div`
   position: fixed;
   width: 42px;
   height: 45px;
-  background: #174164;
+  background: #02223b;
   right: 30px;
   text-align: center;
   line-height: 45px;

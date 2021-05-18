@@ -32,7 +32,6 @@ const Genres = ({
 
   useEffect(() => {
     getGenres();
-
     return () => {
       setGenres({}); // unmounting
     };
@@ -40,7 +39,7 @@ const Genres = ({
   }, []);
 
   return (
-    <div style={{ padding: "6px 0", fontWeight: "bold" }}>
+    <div style={{ padding: "6px 0", fontWeight: "600" }}>
       {selectedGenres.map((genre) => (
         <Chip
           style={{ margin: 2 }}
