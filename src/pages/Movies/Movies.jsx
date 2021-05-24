@@ -7,6 +7,7 @@ import useGenre from "../../hook/useGenre";
 import Loading from "../../components/Loader/Loading";
 import Card from "../../components/Card/Card";
 import CustomPagination from "../../components/Pagination/CustomPagination";
+
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
@@ -15,7 +16,6 @@ const Movies = () => {
   const [numOfPages, setNumOfPages] = useState();
   const genreforURL = useGenre(selectedGenres);
   const [isLoading, setLoading] = useState(false);
-  const [errors, setErrors] = useState("");
 
   const getMovies = async () => {
     setLoading(true);
@@ -26,9 +26,7 @@ const Movies = () => {
       setLoading(false);
       setMovies(data.results);
       setNumOfPages(data.total_pages);
-    } catch (err) {
-      setErrors(`${err}, the server is unreachable!`);
-    }
+    } catch (err) {}
   };
 
   useEffect(() => {
@@ -40,6 +38,7 @@ const Movies = () => {
   return (
     <MoviesContainer>
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
+
       <div style={{ textAlign: "center" }}>
         <Genres
           type="movie"
@@ -50,13 +49,15 @@ const Movies = () => {
           setPage={setPage}
         />
       </div>
-      {errors.length > 0 && <div>{errors}</div>}
+
       <div style={{ height: "20px" }}></div>
+
       <MoviesContent>
         {isLoading ? (
           <Loading />
         ) : (
           movies.map((movie, index) => (
+           
             <Card
               key={index}
               id={movie.id}
@@ -66,9 +67,11 @@ const Movies = () => {
               media_type="movie"
               vote_average={movie.vote_average}
             />
+           
           ))
         )}
       </MoviesContent>
+
       {numOfPages > 1 && (
         <CustomPagination setPage={setPage} numOfPages={numOfPages} />
       )}

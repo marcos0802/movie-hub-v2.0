@@ -3,6 +3,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import LocalMoviesRoundedIcon from "@material-ui/icons/LocalMoviesRounded";
 import { Nav, MenuBar, NavLink, NavMenu } from "./HeaderStyle";
+import SearchAppBar from "../InputField/SearchBar";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

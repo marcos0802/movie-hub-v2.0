@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import Card from "../../components/Card/Card";
-
-import { SearchBox, SearchContainer, SearchContent } from "./SearchStyle";
-import InputField from "../../components/InputField/InputField";
+import {
+  SearchBox,
+  SearchContainer,
+  SearchContent,
+  SearchInput,
+} from "./SearchStyle";
 import ScrollUpButton from "../../components/Button/ScrollUpButton";
 
 const Search = () => {
@@ -43,15 +46,17 @@ const Search = () => {
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
       <SearchBox>
         <div className="search-form">
-          <InputField
-            type="text"
-            placeholder="Search ..."
-            padding="10px"
-            value={searchText}
-            onChange={(e) => {
-              setSearchText(e.target.value);
-            }}
-          />
+          <SearchInput>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search.."
+              value={searchText}
+              onChange={(e) => {
+                setSearchText(e.target.value);
+              }}
+            />
+          </SearchInput>
           <Button
             onClick={fetchSearch}
             variant="contained"

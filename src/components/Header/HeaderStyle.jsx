@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: #0a0d13;
+  background: #181e2a;
   height: 90px;
   width: 100%;
   display: flex;
@@ -76,11 +76,12 @@ export const NavMenu = styled.div`
     }
 
     &.nav-menu.active {
-      background: #041838;
+      background: #181e2a;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      padding-bottom: 50px;
     }
   }
 `;

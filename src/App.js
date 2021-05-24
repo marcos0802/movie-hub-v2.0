@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
+import MediaDetail from "./pages/MediaDetail/MediaDetail";
 import Movies from "./pages/Movies/Movies";
 import Search from "./pages/Search/Search";
 import Series from "./pages/Series/Series";
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/movies" component={Movies} />
         <Route path="/series" component={Series} />
         <Route path="/search" component={Search} />
+        <Route path="/detail/:Id&:mediaType" component={MediaDetail} />
       </Switch>
       <Footer />
     </Router>

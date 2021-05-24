@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { Chip } from "@material-ui/core";
+
 const Genres = ({
   selectedGenres,
   setSelectedGenres,

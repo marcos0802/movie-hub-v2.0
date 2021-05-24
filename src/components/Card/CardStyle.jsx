@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 200px;
-  margin: 10px;
+  width: 210px;
+  margin: 5px;
   border-radius: 6px;
   background: none;
   cursor: pointer;
@@ -15,6 +15,9 @@ export const CardContainer = styled.div`
     /* border: 2px solid #cdd0d3; */
     box-shadow: 0px 1px 5px #1b3347;
   }
+  .link {
+    text-decoration: none;
+  }
 `;
 
 export const CardImage = styled.img`
@@ -26,11 +29,12 @@ export const CardImage = styled.img`
 `;
 
 export const CardDescription = styled.div`
-  background: none;
+  border-radius: 6px;
+  background: #f0f1f1;
 `;
 
 export const CardTitle = styled.div`
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
   font-size: 0.85em;
   color: #000;
@@ -43,12 +47,15 @@ export const CardTitle = styled.div`
 export const CardFooter = styled.div`
   display: flex;
   justify-content: space-around;
-  padding-bottom: 20px;
-  font-size: 10px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #9fb5c7;
+  font-size: 12px;
   font-weight: 600;
   color: #022f53;
   .vote {
-    background-color: #720a1f;
+    background-color: #1b364d;
     color: #fff;
     border-radius: 6px;
     padding-right: 2px;
