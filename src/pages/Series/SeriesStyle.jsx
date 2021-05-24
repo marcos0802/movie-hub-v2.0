@@ -14,7 +14,7 @@ export const SeriesContainer = styled.div`
 `;
 
 export const SeriesContent = styled.div`
-  margin: 0 50px;
+  margin: 0 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

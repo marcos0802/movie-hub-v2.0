@@ -15,7 +15,7 @@ const Container = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #10314d;
+    background: #ffffff;
     animation: lds-grid 1.2s linear infinite;
   }
   .lds-grid div:nth-child(1) {
