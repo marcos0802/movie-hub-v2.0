@@ -73,15 +73,6 @@ const Header = () => {
         >
           <h4>Search</h4>
         </NavLink>
-        <NavLink
-          to="/about"
-          onClick={() => {
-            window.scroll(0, 0);
-            closeMobileMenu();
-          }}
-        >
-          <h4>About</h4>
-        </NavLink>
       </NavMenu>
     </Nav>
   );
