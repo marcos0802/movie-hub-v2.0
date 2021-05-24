@@ -67,8 +67,8 @@ const Search = () => {
         </div>
         <Tabs
           value={mediaType}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor="secondary"
+          textColor="secondary"
           onChange={(event, newValue) => {
             setMediaType(newValue);
             setPage(1);

@@ -7,8 +7,8 @@ export const MoviesContainer = styled.div`
   padding-bottom: 50px;
   background: linear-gradient(
     0deg,
-    rgba(14, 25, 48, 1) 11%,
-    rgba(14, 25, 48, 0.7685324618128502) 45%,
+    rgba(14, 25, 48, 1) 5%,
+    rgba(14, 25, 48, 0.7685324618128502) 60%,
     rgba(14, 25, 48, 0.5) 95%
   );
 `;

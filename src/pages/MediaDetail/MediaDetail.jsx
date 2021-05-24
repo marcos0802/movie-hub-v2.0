@@ -47,7 +47,6 @@ const MediaDetail = () => {
       ` https://api.themoviedb.org/3/${mediaType}/${Id}/similar?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
     );
     setSimilarShow(data.results);
-    console.log("Similar:", data.results);
   };
 
   useEffect(() => {

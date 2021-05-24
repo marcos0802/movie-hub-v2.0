@@ -23,6 +23,7 @@ const Button = ({ label, background, padding, fontSize }) => {
         padding: `${padding}`,
         fontSize: `${fontSize}`,
       }}
+     
     >
       {label}
     </Btn>

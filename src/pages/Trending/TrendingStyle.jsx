@@ -28,6 +28,24 @@ export const TrendingInfo = styled.div`
     font-weight: 900;
     font-size: 3.5rem;
   }
+  .detail-link {
+    display: inline-block;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    background: steelblue;
+    padding: 10px;
+    font-size: 20px;
+    &:hover {
+      background: white !important;
+      border-color: steelblue;
+      color: black;
+    }
+  }
 `;
 
 export const TrendingContent = styled.div`
@@ -38,4 +56,12 @@ export const TrendingContent = styled.div`
   @media screen and (max-width: 900px) {
     margin: 0 10px;
   }
+`;
+
+
+
+export const Lasted = styled.div`
+  padding: 20px 100px;
+  width: 100%;
+  align-self: flex-start;
 `;

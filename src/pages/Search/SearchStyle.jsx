@@ -28,9 +28,14 @@ export const SearchInput = styled.div`
 export const SearchContainer = styled.div`
   min-height: 80vh;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 50px;
-  background: #f0eeee;
+  background: linear-gradient(
+    0deg,
+    rgba(14, 25, 48, 1) 11%,
+    rgba(14, 25, 48, 0.7685324618128502) 45%,
+    rgba(14, 25, 48, 0.5) 95%
+  );
 `;
 
 export const SearchContent = styled.div`
