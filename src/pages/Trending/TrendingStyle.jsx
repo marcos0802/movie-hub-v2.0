@@ -28,6 +28,11 @@ export const TrendingInfo = styled.div`
     font-weight: 900;
     font-size: 3.5rem;
   }
+  h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
   .detail-link {
     display: inline-block;
     outline: none;
@@ -57,8 +62,6 @@ export const TrendingContent = styled.div`
     margin: 0 10px;
   }
 `;
-
-
 
 export const Lasted = styled.div`
   padding: 20px 100px;

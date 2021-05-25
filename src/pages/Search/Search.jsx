@@ -1,14 +1,21 @@
-import { Button, Tab, Tabs } from "@material-ui/core";
+import {
+  Button,
+  createMuiTheme,
+  Tab,
+  Tabs,
+  TextField,
+  ThemeProvider,
+} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import Card from "../../components/Card/Card";
 import {
+  EmptyResult,
   SearchBox,
   SearchContainer,
   SearchContent,
-  SearchInput,
 } from "./SearchStyle";
 import ScrollUpButton from "../../components/Button/ScrollUpButton";
 
@@ -41,22 +48,26 @@ const Search = () => {
     // eslint-disable-next-line
   }, [mediaType, page]);
 
+  const darkTheme = createMuiTheme({
+    palette: {
+      type: "dark",
+      primary: {
+        main: "#fcf8f8",
+      },
+    },
+  });
+
   return (
     <SearchContainer>
       <ScrollUpButton onClick={() => window.scroll(0, 0)} />
-      <SearchBox>
-        <div className="search-form">
-          <SearchInput>
-            <input
-              type="text"
-              name="search"
-              placeholder="Search.."
-              value={searchText}
-              onChange={(e) => {
-                setSearchText(e.target.value);
-              }}
-            />
-          </SearchInput>
+      <ThemeProvider theme={darkTheme}>
+        <SearchBox>
+          <TextField
+            style={{ flex: 1 }}
+            className="searchBox"
+            label="Search here"
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           <Button
             onClick={fetchSearch}
             variant="contained"
@@ -64,22 +75,30 @@ const Search = () => {
           >
             <SearchIcon fontSize="large" />
           </Button>
+        </SearchBox>
+        <div className="search-form">
+          <Tabs
+            value={mediaType}
+            indicatorColor="primary"
+            textColor="primary"
+            onChange={(event, newValue) => {
+              setMediaType(newValue);
+              setPage(1);
+            }}
+            style={{ paddingBottom: 5 }}
+            aria-label="disabled tabs example"
+          >
+            <Tab
+              style={{ width: "50%", fontWeight: "600" }}
+              label="Search Movies"
+            />
+            <Tab
+              style={{ width: "50%", fontWeight: "600" }}
+              label="Search TV Series"
+            />
+          </Tabs>
         </div>
-        <Tabs
-          value={mediaType}
-          indicatorColor="secondary"
-          textColor="secondary"
-          onChange={(event, newValue) => {
-            setMediaType(newValue);
-            setPage(1);
-          }}
-          style={{ paddingBottom: 5 }}
-          aria-label="disabled tabs example"
-        >
-          <Tab style={{ width: "50%" }} label=" Movies" />
-          <Tab style={{ width: "50%" }} label=" TV Series" />
-        </Tabs>
-      </SearchBox>
+      </ThemeProvider>
       <SearchContent>
         {searchResults.map((result, index) => (
           <Card
@@ -93,6 +112,14 @@ const Search = () => {
           />
         ))}
       </SearchContent>
+
+      {searchText.length > 1 &&
+        searchResults.length < 1 &&
+        (mediaType ? (
+          <EmptyResult>No Series Found</EmptyResult>
+        ) : (
+          <EmptyResult>No Movies Found</EmptyResult>
+        ))}
 
       {numOfPages > 1 && (
         <CustomPagination setPage={setPage} numOfPages={numOfPages} />

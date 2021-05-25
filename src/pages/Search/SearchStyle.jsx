@@ -1,28 +1,10 @@
 import styled from "styled-components";
+
 export const SearchBox = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  .search-form {
-    display: flex;
-  }
-`;
-
-export const SearchInput = styled.div`
-  input[type="text"] {
-    width: 75%;
-    height: 40px;
-    padding: 0 50px;
-    outline: none;
-    border: none;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  input[type="text"]:focus {
-    width: 80%;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  }
+  margin: 10px 10vw;
 `;
 
 export const SearchContainer = styled.div`
@@ -36,6 +18,11 @@ export const SearchContainer = styled.div`
     rgba(14, 25, 48, 0.7685324618128502) 45%,
     rgba(14, 25, 48, 0.5) 95%
   );
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const SearchContent = styled.div`
@@ -46,4 +33,12 @@ export const SearchContent = styled.div`
   @media screen and (max-width: 900px) {
     margin: 0 10px;
   }
+`;
+
+export const EmptyResult = styled.div`
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-size: 25px;
+  font-weight: 700;
 `;

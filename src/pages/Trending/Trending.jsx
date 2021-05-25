@@ -10,7 +10,6 @@ import {
 import ScrollUpButton from "../../components/Button/ScrollUpButton";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
-import SimilarShow from "./Popular/Popular";
 import Popular from "./Popular/Popular";
 
 const Trending = () => {
@@ -60,7 +59,7 @@ const Trending = () => {
         arrows={false}
         autoPlay
         pauseOnHover={false}
-        duration={1000}
+        duration={10000}
       >
         {trendings.map((trending, index) => {
           return (
@@ -71,8 +70,6 @@ const Trending = () => {
             >
               <TrendingInfo>
                 <h2>{trending.name || trending.title}</h2>
-                <h3>{trending.vote_average}</h3>
-                <h3>{trending.media_type}</h3>
                 <h3>{trending.release_date || trending.first_air_date}</h3>
                 <Link
                   to={`/detail/${trending.id}&${trending.media_type}`}

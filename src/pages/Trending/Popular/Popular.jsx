@@ -9,7 +9,7 @@ import { CardContainer, CardFooter, CardImage } from "./PopularStyle";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const Popular = ({ popular,mediaType }) => {
+const Popular = ({ popular, mediaType }) => {
   const items = popular.map((media) => (
     <CardContainer>
       <Link to={`/detail/${media.id}&${mediaType}`} className="link">
@@ -52,6 +52,7 @@ const Popular = ({ popular,mediaType }) => {
       infinite
       // disableDotsControls
       disableButtonsControls
+      animationDuration="2000"
       responsive={responsive}
       items={items}
       autoPlay

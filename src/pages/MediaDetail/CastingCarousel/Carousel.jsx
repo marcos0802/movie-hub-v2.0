@@ -30,7 +30,7 @@ const Carousel = ({ casting }) => {
     },
     1024: {
       items: 7,
-    }
+    },
   };
 
   return (
@@ -39,6 +39,7 @@ const Carousel = ({ casting }) => {
       infinite
       disableDotsControls
       disableButtonsControls
+      animationDuration="5000"
       responsive={responsive}
       items={cast}
       autoPlay

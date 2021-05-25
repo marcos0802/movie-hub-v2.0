@@ -48,6 +48,7 @@ const SimilarShow = ({ similarShow }) => {
       infinite
       disableDotsControls
       disableButtonsControls
+      animationDuration="2000"
       responsive={responsive}
       items={items}
       autoPlay
