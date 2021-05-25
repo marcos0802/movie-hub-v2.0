@@ -23,10 +23,10 @@ const Carousel = ({ casting }) => {
 
   const responsive = {
     0: {
-      items: 3,
+      items: 1,
     },
     512: {
-      items: 5,
+      items: 3,
     },
     1024: {
       items: 7,

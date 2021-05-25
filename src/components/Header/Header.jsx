@@ -23,7 +23,8 @@ const Header = () => {
         <h1>
           {" "}
           <LocalMoviesRoundedIcon style={{ fontSize: "50px" }} />
-          <span>HUB</span>
+          Movie
+          <span>HUB</span>.
         </h1>
       </NavLink>
       <div></div>
