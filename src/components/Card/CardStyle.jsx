@@ -7,8 +7,36 @@ export const CardContainer = styled.div`
   background: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  @media screen and (max-width: 846px) {
-    width: 175px;
+  @media screen and (max-width: 1366px) {
+    width: calc(17.5%);
+  }
+  @media screen and (max-width: 1118px) {
+    width: calc(20%);
+  }
+  @media screen and (max-width: 948px) {
+    width: calc(22.5%);
+  }
+  @media screen and (max-width: 830px) {
+    width: calc(25%);
+  }
+  @media screen and (max-width: 750px) {
+    width: calc(27.5%);
+  }
+
+  @media screen and (max-width: 670px) {
+    width: calc(30%);
+  }
+  @media screen and (max-width: 617px) {
+    width: calc(32.5%);
+  }
+  @media screen and (max-width: 547px) {
+    width: calc(42.5%);
+  }
+  @media screen and (max-width: 420px) {
+    width: calc(45%);
+  }
+  @media screen and (max-width: 370px) {
+    width: calc(60%);
   }
   &:hover {
     transform: scale(1.05);

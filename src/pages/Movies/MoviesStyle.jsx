@@ -18,7 +18,7 @@ export const MoviesContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 948px) {
     margin: 0 10px;
   }
 `;

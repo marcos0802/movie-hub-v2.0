@@ -28,8 +28,11 @@ const Carousel = ({ casting }) => {
     512: {
       items: 3,
     },
+    712: {
+      items: 4,
+    },
     1024: {
-      items: 7,
+      items: 6,
     },
   };
 

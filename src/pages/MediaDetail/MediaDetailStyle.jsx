@@ -20,6 +20,9 @@ export const MediaDescription = styled.div`
   align-items: flex-start;
   .col {
     margin: 20px;
+    @media screen and (max-width: 900px) {
+      margin: 10px;
+    }
   }
   .right {
     display: flex;
@@ -38,6 +41,10 @@ export const MediaDescription = styled.div`
       text-align: center;
       color: white;
       font-weight: 700;
+      @media screen and (max-width: 900px) {
+        font-size: 20px;
+        width: 200px;
+      }
     }
   }
   .image {
@@ -48,15 +55,20 @@ export const MediaDescription = styled.div`
     border-radius: 6px;
     background: none;
     img {
-      width: 300px;
-      width: 400px;
+      width: 330px;
       object-fit: cover;
+      @media screen and (max-width: 900px) {
+        width: 300px;
+      }
     }
   }
   h2 {
     color: white;
     font-weight: 900;
     font-size: 70px;
+    @media screen and (max-width: 900px) {
+      font-size: 45px;
+    }
   }
 
   p {
@@ -64,6 +76,10 @@ export const MediaDescription = styled.div`
     color: #e9e1e1;
     font-size: 20px;
     font-weight: 700;
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+      padding: 2px;
+    }
   }
   @media screen and (max-width: 900px) {
     margin: 0 10px;
@@ -74,10 +90,13 @@ export const Subtitle = styled.h3`
   font-weight: 700;
   font-size: 23px;
   color: white;
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+  }
 `;
 
 export const SimilarShowContainer = styled.div`
-  width: 70%;
+  width: 75%;
   align-self: center;
   margin-bottom: 50px;
 `;

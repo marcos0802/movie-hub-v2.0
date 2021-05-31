@@ -84,15 +84,11 @@ const Trending = () => {
       </Slide>
 
       <Lasted>
-        <h3 style={{ color: "white", fontSize: "32px", fontWeight: "700" }}>
-          Popular Movies
-        </h3>
+        <h3>Popular Movies</h3>
         <div>
           <Popular popular={popularMovies} mediaType={"movie"} />
         </div>
-        <h3 style={{ color: "white", fontSize: "32px", fontWeight: "700" }}>
-          Popular Tv Series
-        </h3>
+        <h3>Popular Tv Series</h3>
         <div>
           <Popular popular={popularSeries} mediaType={"tv"} />
         </div>

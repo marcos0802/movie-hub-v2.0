@@ -36,10 +36,13 @@ const Popular = ({ popular, mediaType }) => {
 
   const responsive = {
     0: {
-      items: 3,
+      items: 1,
     },
     512: {
-      items: 6,
+      items: 3,
+    },
+    924: {
+      items: 5,
     },
     1024: {
       items: 7,
@@ -50,8 +53,8 @@ const Popular = ({ popular, mediaType }) => {
     <AliceCarousel
       mouseTracking
       infinite
-      // disableDotsControls
-      disableButtonsControls
+      disableDotsControls
+      // disableButtonsControls
       animationDuration="2000"
       responsive={responsive}
       items={items}

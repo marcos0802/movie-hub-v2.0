@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 120px;
+  width: 150px;
   margin: 10px;
   border-radius: 6px;
   background: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  @media screen and (max-width: 846px) {
-    width: 100px;
-  }
   &:hover {
     transform: scale(1.05);
     /* border: 2px solid #cdd0d3; */

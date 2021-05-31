@@ -38,7 +38,7 @@ const SimilarShow = ({ similarShow }) => {
       items: 3,
     },
     1024: {
-      items: 8,
+      items: 6,
     },
   };
 

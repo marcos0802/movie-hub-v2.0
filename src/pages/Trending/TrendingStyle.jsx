@@ -27,11 +27,17 @@ export const TrendingInfo = styled.div`
     color: white;
     font-weight: 900;
     font-size: 3.5rem;
+    @media screen and (max-width: 900px) {
+      font-size: 2.5rem;
+    }
   }
   h3 {
     color: white;
     font-weight: 600;
     font-size: 1.5rem;
+    @media screen and (max-width: 900px) {
+      font-size: 1.2rem;
+    }
   }
   .detail-link {
     display: inline-block;
@@ -50,6 +56,10 @@ export const TrendingInfo = styled.div`
       border-color: steelblue;
       color: black;
     }
+    @media screen and (max-width: 900px) {
+      padding: 8px;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -67,4 +77,12 @@ export const Lasted = styled.div`
   padding: 20px 100px;
   width: 100%;
   align-self: flex-start;
+  h3 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    @media screen and (max-width: 900px) {
+      font-size: 22px;
+    }
+  }
 `;

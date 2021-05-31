@@ -78,7 +78,7 @@ const MediaDetail = () => {
                 href={`https://www.youtube.com/watch?v=${video}`}
                 style={{ margin: "5px" }}
               >
-                Watch the Trailer
+                Watch the Trailer - youtube
               </Button>
             </div>
           </div>
@@ -99,7 +99,7 @@ const MediaDetail = () => {
               <p>{detail.overview}</p>
             </div>
             <div
-              style={{ width: "50vw", height: "120px", marginBottom: "60px" }}
+              style={{ width: "55vw", height: "120px", marginBottom: "60px" }}
             >
               <Subtitle>Casting</Subtitle>
               <Carousel casting={casting} />
